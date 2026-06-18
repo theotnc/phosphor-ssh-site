@@ -3,25 +3,80 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Phosphor SSH</title>
+<title>Phosphor SSH — Client SSH, SFTP & Wake-on-LAN</title>
 <style>
-  :root { color-scheme: light dark; }
+  :root { color-scheme: light dark; --green:#33FF77; }
+  * { box-sizing: border-box; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-         max-width: 640px; margin: 0 auto; padding: 3rem 1.25rem; line-height: 1.6;
+         max-width: 760px; margin: 0 auto; padding: 3rem 1.25rem 4rem; line-height: 1.6;
          color: #1a1a1a; background: #fafafa; }
-  @media (prefers-color-scheme: dark) { body { color: #e6e6e6; background: #121212; } a { color: #6fa8ff; } }
-  h1 { font-size: 1.8rem; }
-  ul { line-height: 2; }
-  .meta { color: #888; font-size: .9rem; }
+  @media (prefers-color-scheme: dark) { body { color: #e6e6e6; background: #0d0d0d; } a { color: #6fa8ff; } .card { background:#161616; border-color:#262626; } }
+  header { text-align:center; margin-bottom: 2.5rem; }
+  .logo { font-family: ui-monospace, "JetBrains Mono", Menlo, monospace; font-size: 2.4rem;
+          color: var(--green); background:#0A0A0A; display:inline-block; padding:.4rem 1rem;
+          border-radius: 16px; letter-spacing: .05em; }
+  h1 { font-size: 1.9rem; margin: 1rem 0 .25rem; }
+  .tagline { color:#888; font-size: 1.05rem; margin-top:0; }
+  h2 { font-size: 1.25rem; margin-top: 2.5rem; }
+  .downloads { display:grid; gap:1rem; grid-template-columns: 1fr; margin-top:1rem; }
+  @media (min-width:560px){ .downloads { grid-template-columns: 1fr 1fr 1fr; } }
+  .card { border:1px solid #e2e2e2; background:#fff; border-radius:14px; padding:1.25rem; text-align:center; }
+  .card h3 { margin:.2rem 0 .6rem; font-size:1.05rem; }
+  .btn { display:inline-block; background:var(--green); color:#0A0A0A; font-weight:600;
+         text-decoration:none; padding:.55rem 1rem; border-radius:10px; margin:.2rem 0; }
+  .btn.secondary { background:transparent; color:inherit; border:1px solid #999; font-weight:500; font-size:.85rem; padding:.35rem .8rem; }
+  .soon { color:#999; font-size:.9rem; }
+  ul.features { line-height: 2; }
+  footer { margin-top:3rem; text-align:center; color:#888; font-size:.9rem; }
 </style>
 </head>
 <body>
-<h1>Phosphor SSH</h1>
-<p>Client SSH, SFTP &amp; Wake-on-LAN pour iOS — 100 % local, sans compte ni cloud.</p>
-<ul>
-  <li><a href="privacy.html">Politique de confidentialité / Privacy Policy</a></li>
-  <li><a href="support.html">Assistance / Support</a></li>
+
+<header>
+  <div class="logo">&gt;_</div>
+  <h1>Phosphor SSH</h1>
+  <p class="tagline">Client SSH, SFTP &amp; Wake-on-LAN — 100 % local, sans compte ni cloud.</p>
+</header>
+
+<h2>Télécharger</h2>
+<div class="downloads">
+
+  <div class="card">
+    <h3>🪟 Windows</h3>
+    <a class="btn" href="https://github.com/theotnc/phosphor-ssh-site/releases/download/v1.0.0/PhosphorSSH-Setup-1.0.0.exe">Installateur (.exe)</a>
+    <br>
+    <a class="btn secondary" href="https://github.com/theotnc/phosphor-ssh-site/releases/download/v1.0.0/PhosphorSSH-Windows.zip">Version portable (.zip)</a>
+  </div>
+
+  <div class="card">
+    <h3>🍎 macOS</h3>
+    <p class="soon">Bientôt disponible</p>
+  </div>
+
+  <div class="card">
+    <h3>📱 iPhone / iPad</h3>
+    <p class="soon">Bientôt sur l'App Store</p>
+  </div>
+
+</div>
+
+<h2>Fonctionnalités</h2>
+<ul class="features">
+  <li>🖥️ Terminal SSH temps réel (mot de passe ou clé privée)</li>
+  <li>📁 Transfert de fichiers SFTP</li>
+  <li>📋 Gestion et regroupement de serveurs</li>
+  <li>⚡ Wake-on-LAN sur le réseau local</li>
+  <li>🎨 Terminal personnalisable (thème, police, taille)</li>
+  <li>🔒 Verrouillage par Face ID / Touch ID / code</li>
 </ul>
-<p class="meta">© 2026 txrn · Contact : <a href="mailto:txrn@mp.me">txrn@mp.me</a></p>
+
+<h2>Confidentialité</h2>
+<p>Phosphor SSH ne collecte aucune donnée. Vos identifiants restent sur votre appareil.
+Voir la <a href="privacy.html">politique de confidentialité</a> et la page d'<a href="support.html">assistance</a>.</p>
+
+<footer>
+  © 2026 txrn · <a href="mailto:txrn@mp.me">txrn@mp.me</a>
+</footer>
+
 </body>
 </html>
