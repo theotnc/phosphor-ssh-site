@@ -1,81 +1,304 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Phosphor SSH — Client SSH, SFTP & Wake-on-LAN</title>
-<style>
-  :root { color-scheme: light dark; --green:#33FF77; }
-  * { box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-         max-width: 760px; margin: 0 auto; padding: 3rem 1.25rem 4rem; line-height: 1.6;
-         color: #1a1a1a; background: #fafafa; }
-  @media (prefers-color-scheme: dark) { body { color: #e6e6e6; background: #0d0d0d; } a { color: #6fa8ff; } .card { background:#161616; border-color:#262626; } }
-  header { text-align:center; margin-bottom: 2.5rem; }
-  .logo { font-family: ui-monospace, "JetBrains Mono", Menlo, monospace; font-size: 2.4rem;
-          color: var(--green); background:#0A0A0A; display:inline-block; padding:.4rem 1rem;
-          border-radius: 16px; letter-spacing: .05em; }
-  h1 { font-size: 1.9rem; margin: 1rem 0 .25rem; }
-  .tagline { color:#888; font-size: 1.05rem; margin-top:0; }
-  h2 { font-size: 1.25rem; margin-top: 2.5rem; }
-  .downloads { display:grid; gap:1rem; grid-template-columns: 1fr; margin-top:1rem; }
-  @media (min-width:560px){ .downloads { grid-template-columns: 1fr 1fr 1fr; } }
-  .card { border:1px solid #e2e2e2; background:#fff; border-radius:14px; padding:1.25rem; text-align:center; }
-  .card h3 { margin:.2rem 0 .6rem; font-size:1.05rem; }
-  .btn { display:inline-block; background:var(--green); color:#0A0A0A; font-weight:600;
-         text-decoration:none; padding:.55rem 1rem; border-radius:10px; margin:.2rem 0; }
-  .btn.secondary { background:transparent; color:inherit; border:1px solid #999; font-weight:500; font-size:.85rem; padding:.35rem .8rem; }
-  .soon { color:#999; font-size:.9rem; }
-  ul.features { line-height: 2; }
-  footer { margin-top:3rem; text-align:center; color:#888; font-size:.9rem; }
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phosphor SSH — client SSH/SFTP sobre et sombre</title>
+<meta name="description" content="Phosphor SSH — client SSH/SFTP multiplateforme (iPhone, Windows, macOS) à l'esthétique Matrix-pro. Terminal, SFTP, Wake-on-LAN, 100 % local.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-  <div class="logo">&gt;_</div>
-  <h1>Phosphor SSH</h1>
-  <p class="tagline">Client SSH, SFTP &amp; Wake-on-LAN — 100 % local, sans compte ni cloud.</p>
+<!-- ===== Top nav ===== -->
+<header class="nav-top">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="logo">P</span> Phosphor<span style="color:var(--muted);font-weight:400">SSH</span></a>
+    <nav class="nav-links">
+      <a href="#fonctions">Fonctions</a>
+      <a href="#apercu">Aperçu</a>
+      <a href="#securite">Sécurité</a>
+      <a class="ghost-btn" href="#telecharger">Télécharger</a>
+    </nav>
+  </div>
 </header>
 
-<h2>Télécharger</h2>
-<div class="downloads">
+<!-- ===== Hero ===== -->
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Client SSH · iOS · Windows · macOS</div>
+    <h1>Phosphor<span class="cursor"></span></h1>
+    <p class="lede">
+      Un client SSH/SFTP sobre, sombre et professionnel. L'interface reste neutre et
+      lisible ; le vert phosphore est réservé à l'identité, à l'état « connecté » et au
+      terminal — là où vit le côté Matrix.
+    </p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#telecharger"><span class="ic">⤓</span> Télécharger</a>
+      <a class="btn btn-ghost" href="#apercu"><span class="ic">▤</span> Voir l'aperçu</a>
+    </div>
+    <p class="platforms">100 % local · gratuit · sans compte — <b>iPhone</b> · <b>Windows</b> · <b>macOS</b></p>
 
-  <div class="card">
-    <h3>🪟 Windows</h3>
-    <a class="btn" href="https://github.com/theotnc/phosphor-ssh-site/releases/download/v1.0.0/PhosphorSSH-Setup-1.0.0.exe">Installateur (.exe)</a>
-    <br>
-    <a class="btn secondary" href="https://github.com/theotnc/phosphor-ssh-site/releases/download/v1.0.0/PhosphorSSH-Windows.zip">Version portable (.zip)</a>
+    <div class="tokens" aria-hidden="true">
+      <div class="swatch"><span class="chip" style="background:#0A0A0A;border:1px solid #262626"></span> Fond <span class="hex">#0A0A0A</span></div>
+      <div class="swatch"><span class="chip" style="background:#161616"></span> Surface <span class="hex">#161616</span></div>
+      <div class="swatch"><span class="chip" style="background:#E5E5E5"></span> Texte <span class="hex">#E5E5E5</span></div>
+      <div class="swatch"><span class="chip" style="background:#22E36B"></span> Accent <span class="hex">#22E36B</span></div>
+      <div class="swatch"><span class="chip" style="background:#33FF77"></span> Terminal <span class="hex">#33FF77</span></div>
+    </div>
   </div>
+</section>
 
-  <div class="card">
-    <h3>🍎 macOS</h3>
-    <p class="soon">Bientôt disponible</p>
+<!-- ===== Features ===== -->
+<section id="fonctions">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">// ce que ça fait</div>
+      <h2>Tout ce qu'il faut pour gérer ses machines</h2>
+      <p>Sauvegarder ses serveurs, se connecter, transférer des fichiers et réveiller des machines — depuis le téléphone comme depuis le bureau.</p>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="ic">▤</div>
+        <h3>Gestion des serveurs</h3>
+        <p>Créer, lister, rechercher et grouper ses serveurs. Pastille de couleur, badge d'état et tri par récents.</p>
+      </div>
+      <div class="feature">
+        <div class="ic">$_</div>
+        <h3>Terminal SSH</h3>
+        <p>Session interactive via <span style="font-family:var(--mono)">dartssh2</span> + <span style="font-family:var(--mono)">xterm</span>, mot de passe ou clé privée, avec barre de touches spéciales sur mobile.</p>
+      </div>
+      <div class="feature">
+        <div class="ic">⤓</div>
+        <h3>SFTP</h3>
+        <p>Navigateur de fichiers distant : parcourir les dossiers, télécharger et envoyer — en réutilisant la session SSH ouverte.</p>
+      </div>
+      <div class="feature">
+        <div class="ic">⏻</div>
+        <h3>Wake-on-LAN</h3>
+        <p>Réveiller une machine endormie d'un « magic packet », à partir de son adresse MAC. (Sur le réseau local.)</p>
+      </div>
+      <div class="feature">
+        <div class="ic">⚙</div>
+        <h3>Terminal sur mesure</h3>
+        <p>Police, taille, intensité du vert et densité — avec aperçu en direct, appliqués sans redémarrage.</p>
+      </div>
+      <div class="feature">
+        <div class="ic">⛨</div>
+        <h3>Verrouillage</h3>
+        <p>Biométrie ou code via le système, verrouillage à la mise en arrière-plan. Aucun secret stocké en clair.</p>
+      </div>
+    </div>
   </div>
+</section>
 
-  <div class="card">
-    <h3>📱 iPhone / iPad</h3>
-    <p class="soon">Bientôt sur l'App Store</p>
+<!-- ===== Showcase (mockup fidèle) ===== -->
+<section id="apercu">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow">// aperçu</div>
+      <h2>La même app, du mobile au bureau</h2>
+      <p>Navigation adaptative : barre du bas sur mobile, panneau latéral sur desktop.</p>
+    </div>
+
+    <div class="phones">
+
+      <!-- SCREEN 1 : LISTE -->
+      <div class="col">
+        <div class="phone">
+          <div class="notch"></div>
+          <div class="screen">
+            <div class="statusbar"><span>9:41</span><span>📶 100%</span></div>
+            <div class="topbar">
+              <div class="s-brand"><span class="logo">P</span> Serveurs</div>
+              <div class="icon-btn">⌕</div>
+            </div>
+            <div class="search">⌕ &nbsp;Rechercher un serveur…</div>
+            <div class="s-body">
+              <div class="grouplabel">Production</div>
+              <div class="card live">
+                <span class="dot" style="background:#22E36B"></span>
+                <div class="meta"><div class="name">web-01</div><div class="sub">deploy@10.0.4.12:22</div></div>
+                <span class="pill">Connecté</span>
+              </div>
+              <div class="card">
+                <span class="dot" style="background:#F5A623"></span>
+                <div class="meta"><div class="name">db-master</div><div class="sub">root@10.0.4.20:22</div></div>
+                <span class="pill off">SSH</span>
+              </div>
+              <div class="grouplabel">Maison</div>
+              <div class="card">
+                <span class="dot" style="background:#7fd0ff"></span>
+                <div class="meta"><div class="name">nas-perso</div><div class="sub">admin@192.168.1.10</div></div>
+                <span class="pill off">WoL</span>
+              </div>
+              <div class="card">
+                <span class="dot" style="background:#c77dff"></span>
+                <div class="meta"><div class="name">raspberry</div><div class="sub">pi@192.168.1.42:22</div></div>
+                <span class="pill off">SSH</span>
+              </div>
+            </div>
+            <div class="fab">+</div>
+            <div class="s-nav">
+              <div class="item active"><span class="glyph">▤</span>Serveurs</div>
+              <div class="item"><span class="glyph">⤓</span>Fichiers</div>
+              <div class="item"><span class="glyph">⚙</span>Réglages</div>
+            </div>
+          </div>
+        </div>
+        <div class="caption">// liste des serveurs</div>
+      </div>
+
+      <!-- SCREEN 2 : AJOUT -->
+      <div class="col">
+        <div class="phone">
+          <div class="notch"></div>
+          <div class="screen">
+            <div class="statusbar"><span>9:41</span><span>📶 100%</span></div>
+            <div class="topbar">
+              <div class="s-brand" style="font-size:16px"><span style="color:var(--muted)">‹</span>&nbsp;Nouveau serveur</div>
+            </div>
+            <div class="s-body" style="overflow-y:auto">
+              <div class="field"><label>Nom</label><div class="input placeholder">web-01</div></div>
+              <div class="row2">
+                <div class="field" style="flex:2"><label>Hôte</label><div class="input">10.0.4.12</div></div>
+                <div class="field"><label>Port</label><div class="input">22</div></div>
+              </div>
+              <div class="field"><label>Utilisateur</label><div class="input">deploy</div></div>
+              <div class="field"><label>Authentification</label>
+                <div class="seg"><span class="on">Mot de passe</span><span>Clé privée</span></div>
+              </div>
+              <div class="field"><label>Mot de passe</label><div class="input">••••••••••</div></div>
+              <div class="field"><label>Adresse MAC · Wake-on-LAN</label><div class="input placeholder">A1:B2:C3:D4:E5:F6</div></div>
+              <div class="field"><label>Couleur</label>
+                <div class="colors">
+                  <span class="c sel" style="background:#22E36B"></span>
+                  <span class="c" style="background:#F5A623"></span>
+                  <span class="c" style="background:#FF5555"></span>
+                  <span class="c" style="background:#7fd0ff"></span>
+                  <span class="c" style="background:#c77dff"></span>
+                </div>
+              </div>
+              <div class="savebtn">Enregistrer</div>
+            </div>
+          </div>
+        </div>
+        <div class="caption">// ajout / édition</div>
+      </div>
+
+      <!-- SCREEN 3 : TERMINAL -->
+      <div class="col">
+        <div class="phone">
+          <div class="notch"></div>
+          <div class="screen">
+            <div class="statusbar"><span>9:41</span><span>📶 100%</span></div>
+            <div class="term-head">
+              <span class="back">‹</span>
+              <div><div class="t-name">web-01</div><div class="t-sub">● connecté · deploy@10.0.4.12</div></div>
+            </div>
+            <div class="term">
+<span class="dim">Last login: Thu Jun 11 09:38 from 10.0.4.1</span><br><br>
+<span class="user">deploy@web-01</span>:<span class="path">~</span>$ uptime<br>
+ 09:41:02 up 42 days,  3:17,  1 user<br>
+ load average: 0.08, 0.03, 0.01<br><br>
+<span class="user">deploy@web-01</span>:<span class="path">~</span>$ systemctl status nginx<br>
+<span class="dim">●</span> nginx.service — A high performance web server<br>
+   Active: <span style="color:#33FF77">active (running)</span> since Mon<br>
+   Memory: 12.4M&nbsp;&nbsp;&nbsp;CPU: 1.2s<br><br>
+<span class="user">deploy@web-01</span>:<span class="path">~</span>$ <span class="blink-cur"></span>
+            </div>
+            <div class="keybar">
+              <span class="key accent">Esc</span>
+              <span class="key">Tab</span>
+              <span class="key">Ctrl</span>
+              <span class="key">/</span>
+              <span class="key">↑</span>
+              <span class="key">↓</span>
+            </div>
+          </div>
+        </div>
+        <div class="caption">// session ssh · terminal</div>
+      </div>
+
+    </div>
   </div>
+</section>
 
-</div>
+<!-- ===== Security / local-first band ===== -->
+<section id="securite">
+  <div class="wrap">
+    <div class="band">
+      <div>
+        <div class="eyebrow">// vos secrets restent chez vous</div>
+        <h2>Local d'abord, sécurisé par conception</h2>
+        <p>Aucun compte, aucun cloud. Les serveurs sont stockés localement ; les secrets ne transitent jamais par la base de données.</p>
+        <ul>
+          <li><span class="tick">▹</span> Mots de passe et clés gardés dans le coffre sécurisé du système, jamais en clair.</li>
+          <li><span class="tick">▹</span> Modèle de données « sync-ready » — la synchro pourra venir plus tard, sans casse.</li>
+          <li><span class="tick">▹</span> Verrouillage biométrique / code, optionnel à la mise en arrière-plan.</li>
+          <li><span class="tick">▹</span> Architecture en couches, testée — zéro avertissement à la fusion.</li>
+        </ul>
+      </div>
+      <div class="code-card">
+<span class="dim"># un serveur = une fiche, zéro secret en base</span><br>
+Server(<br>
+&nbsp;&nbsp;label: <span class="c-path">"web-01"</span>,<br>
+&nbsp;&nbsp;host: <span class="c-path">"10.0.4.12"</span>, port: 22,<br>
+&nbsp;&nbsp;username: <span class="c-path">"deploy"</span>,<br>
+&nbsp;&nbsp;authType: <span class="c-key">AuthType.privateKey</span>,<br>
+)<br>
+<span class="dim"># → mot de passe / clé : secure storage</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-<h2>Fonctionnalités</h2>
-<ul class="features">
-  <li>🖥️ Terminal SSH temps réel (mot de passe ou clé privée)</li>
-  <li>📁 Transfert de fichiers SFTP</li>
-  <li>📋 Gestion et regroupement de serveurs</li>
-  <li>⚡ Wake-on-LAN sur le réseau local</li>
-  <li>🎨 Terminal personnalisable (thème, police, taille)</li>
-  <li>🔒 Verrouillage par Face ID / Touch ID / code</li>
-</ul>
+<!-- ===== Download ===== -->
+<section id="telecharger">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow">// télécharger</div>
+      <h2>Disponible sur vos plateformes</h2>
+      <p>Une seule app, compilée nativement pour chaque plateforme. Les binaires arrivent — l'app est fonctionnellement complète.</p>
+    </div>
+    <div class="dl-grid">
+      <div class="dl">
+        <div class="os"></div>
+        <h3>iPhone · iOS</h3>
+        <div class="sub">iOS 13+</div>
+        <span class="status soon">Bientôt</span>
+      </div>
+      <div class="dl">
+        <div class="os">⊞</div>
+        <h3>Windows</h3>
+        <div class="sub">Windows 10 / 11 — v1.0.1 (~13 Mo)</div>
+        <a class="btn btn-primary" href="/downloads/PhosphorSSH-1.0.1-windows-x64.zip" download>
+          <span class="ic">⤓</span> Télécharger (.zip)
+        </a>
+      </div>
+      <div class="dl">
+        <div class="os"></div>
+        <h3>macOS</h3>
+        <div class="sub">macOS 11+</div>
+        <span class="status soon">Bientôt</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-<h2>Confidentialité</h2>
-<p>Phosphor SSH ne collecte aucune donnée. Vos identifiants restent sur votre appareil.
-Voir la <a href="privacy.html">politique de confidentialité</a> et la page d'<a href="support.html">assistance</a>.</p>
-
+<!-- ===== Footer ===== -->
 <footer>
-  © 2026 txrn · <a href="mailto:txrn@mp.me">txrn@mp.me</a>
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="logo">P</span> Phosphor<span style="color:var(--muted);font-weight:400">SSH</span></a>
+    <p class="note">
+      <a href="/privacy.html">Confidentialité</a> ·
+      <a href="/support.html">Assistance</a> ·
+      <a href="mailto:txrnink@pm.me">txrnink@pm.me</a>
+    </p>
+  </div>
 </footer>
 
 </body>

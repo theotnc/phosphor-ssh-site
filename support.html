@@ -1,55 +1,104 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Assistance — Phosphor SSH</title>
+<meta name="description" content="Aide, FAQ et contact pour Phosphor SSH — client SSH, SFTP et Wake-on-LAN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 <style>
-  :root { color-scheme: light dark; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-         max-width: 720px; margin: 0 auto; padding: 2rem 1.25rem; line-height: 1.6;
-         color: #1a1a1a; background: #fafafa; }
-  @media (prefers-color-scheme: dark) { body { color: #e6e6e6; background: #121212; } a { color: #6fa8ff; } }
-  h1 { font-size: 1.6rem; } h2 { font-size: 1.15rem; margin-top: 2rem; }
-  hr { border: none; border-top: 1px solid #8884; margin: 3rem 0; }
+  .doc { max-width: 720px; margin: 0 auto; padding: 56px 20px 96px; }
+  .doc h1 { font-size: 30px; letter-spacing: -.02em; margin: 8px 0 6px; line-height: 1.2; }
+  .doc .lede { color: #b8b8b8; font-size: 16px; line-height: 1.65; margin-bottom: 28px; }
+  .doc h2 { font-size: 17px; margin: 34px 0 10px; color: var(--text); font-weight: 600; }
+  .doc p { color: #b8b8b8; margin: 0 0 12px; line-height: 1.7; }
+  .doc strong { color: var(--text); font-weight: 600; }
+  .doc a { color: var(--green); }
+  .doc hr { border: none; border-top: 1px solid var(--border); margin: 56px 0; }
+  .lang { font-family: var(--mono); font-size: 11px; letter-spacing: .22em; text-transform: uppercase; margin-bottom: 24px; }
+  .lang a { color: var(--muted); margin-right: 18px; }
+  .lang a:hover { color: var(--text); }
+  .contact-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-card);
+    padding: 20px 22px;
+    margin: 18px 0 24px;
+  }
+  .contact-card .label { font-family: var(--mono); font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .contact-card a { color: var(--green); font-size: 17px; font-weight: 500; }
+  footer { border-top: 1px solid var(--border); padding: 28px 0; margin-top: 24px; }
+  footer .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+  footer .note { color: var(--muted); font-size: 13px; }
+  footer .note a { color: var(--muted); }
+  footer .note a:hover { color: var(--text); }
 </style>
 </head>
 <body>
 
-<section>
-<h1>Assistance — Phosphor SSH</h1>
-<p>Phosphor SSH est un client SSH, SFTP et Wake-on-LAN pour iOS. 100 % local,
-sans compte ni cloud.</p>
+<header class="nav-top">
+  <div class="wrap">
+    <a class="brand" href="/"><span class="logo">P</span> Phosphor<span style="color:var(--muted);font-weight:400">SSH</span></a>
+    <nav class="nav-links">
+      <a href="/#fonctions">Fonctions</a>
+      <a href="/#apercu">Aperçu</a>
+      <a href="/#securite">Sécurité</a>
+      <a class="ghost-btn" href="/#telecharger">Télécharger</a>
+    </nav>
+  </div>
+</header>
 
-<h2>Besoin d'aide ?</h2>
-<p>Pour toute question, bug ou suggestion, contactez-nous :
-<strong><a href="mailto:txrn@mp.me">txrn@mp.me</a></strong></p>
+<main class="doc">
 
-<h2>Questions fréquentes</h2>
-<p><strong>Mes mots de passe et clés sont-ils en sécurité ?</strong><br>
-Oui. Ils sont stockés dans le Trousseau iOS (Keychain) et ne quittent jamais votre
-appareil.</p>
-<p><strong>L'application envoie-t-elle des données ?</strong><br>
-Non. Les seules connexions sont celles que vous initiez vers vos propres serveurs.</p>
-</section>
+  <section id="fr">
+    <div class="eyebrow">// assistance</div>
+    <h1>Assistance</h1>
+    <p class="lede">Phosphor SSH est un client SSH, SFTP et Wake-on-LAN. 100 % local,
+    sans compte ni cloud.</p>
 
-<hr>
+    <h2>Besoin d'aide ?</h2>
+    <p>Pour toute question, bug ou suggestion, écrivez-nous — on répond.</p>
+    <div class="contact-card">
+      <div class="label">// contact</div>
+      <a href="mailto:txrnink@pm.me">txrnink@pm.me</a>
+    </div>
 
-<section>
-<h1>Support — Phosphor SSH</h1>
-<p>Phosphor SSH is an SSH, SFTP and Wake-on-LAN client for iOS. 100% local, no
-account, no cloud.</p>
+    <h2>Questions fréquentes</h2>
 
-<h2>Need help?</h2>
-<p>For any question, bug or suggestion, contact us:
-<strong><a href="mailto:txrn@mp.me">txrn@mp.me</a></strong></p>
+    <p><strong>Mes mots de passe et clés sont-ils en sécurité ?</strong><br>
+    Oui. Ils sont stockés dans le Trousseau iOS (Keychain) et ne quittent jamais votre
+    appareil.</p>
 
-<h2>FAQ</h2>
-<p><strong>Are my passwords and keys safe?</strong><br>
-Yes. They are stored in the iOS Keychain and never leave your device.</p>
-<p><strong>Does the app send any data?</strong><br>
-No. The only connections are the ones you initiate to your own servers.</p>
-</section>
+    <p><strong>L'application envoie-t-elle des données ?</strong><br>
+    Non. Les seules connexions sont celles que vous initiez vers vos propres
+    serveurs.</p>
+
+    <p><strong>Wake-on-LAN ne fonctionne pas, que faire ?</strong><br>
+    Vérifiez que la machine cible est sur le même réseau local, que l'option WoL est
+    activée dans son BIOS / UEFI et dans son OS, et que l'adresse MAC saisie est bien
+    celle de l'interface réseau qui restera alimentée en veille.</p>
+
+    <p><strong>Comment importer une clé SSH ?</strong><br>
+    Dans l'écran d'ajout d'un serveur, choisissez « Clé privée » puis collez le
+    contenu de votre clé (OpenSSH ou PEM). La passphrase éventuelle vous sera
+    demandée à la connexion.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="/"><span class="logo">P</span> Phosphor<span style="color:var(--muted);font-weight:400">SSH</span></a>
+    <p class="note">
+      <a href="/privacy.html">Confidentialité</a> ·
+      <a href="/support.html">Assistance</a> ·
+      <a href="mailto:txrnink@pm.me">txrnink@pm.me</a>
+    </p>
+  </div>
+</footer>
 
 </body>
 </html>

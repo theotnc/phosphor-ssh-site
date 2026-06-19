@@ -1,125 +1,116 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Politique de confidentialité — Phosphor SSH</title>
+<meta name="description" content="Phosphor SSH ne collecte aucune donnée personnelle. Tout reste sur votre appareil.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 <style>
-  :root { color-scheme: light dark; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-         max-width: 720px; margin: 0 auto; padding: 2rem 1.25rem; line-height: 1.6;
-         color: #1a1a1a; background: #fafafa; }
-  @media (prefers-color-scheme: dark) { body { color: #e6e6e6; background: #121212; } a { color: #6fa8ff; } }
-  h1 { font-size: 1.6rem; } h2 { font-size: 1.15rem; margin-top: 2rem; }
-  .meta { color: #888; font-size: .9rem; }
-  hr { border: none; border-top: 1px solid #8884; margin: 3rem 0; }
-  .lang-switch { font-size: .9rem; margin-bottom: 1.5rem; }
+  .doc { max-width: 720px; margin: 0 auto; padding: 56px 20px 96px; }
+  .doc h1 { font-size: 30px; letter-spacing: -.02em; margin: 8px 0 6px; line-height: 1.2; }
+  .doc .meta { color: var(--muted); font-family: var(--mono); font-size: 12px; letter-spacing: .04em; margin-bottom: 28px; }
+  .doc h2 { font-size: 17px; margin: 34px 0 10px; color: var(--text); font-weight: 600; }
+  .doc p { color: #b8b8b8; margin: 0 0 12px; line-height: 1.7; }
+  .doc strong { color: var(--text); font-weight: 600; }
+  .doc a { color: var(--green); }
+  .doc hr { border: none; border-top: 1px solid var(--border); margin: 56px 0; }
+  .lang { font-family: var(--mono); font-size: 11px; letter-spacing: .22em; text-transform: uppercase; margin-bottom: 24px; }
+  .lang a { color: var(--muted); margin-right: 18px; }
+  .lang a:hover { color: var(--text); }
+  footer { border-top: 1px solid var(--border); padding: 28px 0; margin-top: 24px; }
+  footer .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+  footer .note { color: var(--muted); font-size: 13px; }
+  footer .note a { color: var(--muted); }
+  footer .note a:hover { color: var(--text); }
 </style>
 </head>
 <body>
 
-<p class="lang-switch"><a href="#fr">Français</a> · <a href="#en">English</a></p>
+<header class="nav-top">
+  <div class="wrap">
+    <a class="brand" href="/"><span class="logo">P</span> Phosphor<span style="color:var(--muted);font-weight:400">SSH</span></a>
+    <nav class="nav-links">
+      <a href="/#fonctions">Fonctions</a>
+      <a href="/#apercu">Aperçu</a>
+      <a href="/#securite">Sécurité</a>
+      <a class="ghost-btn" href="/#telecharger">Télécharger</a>
+    </nav>
+  </div>
+</header>
 
-<section id="fr">
-<h1>Politique de confidentialité — Phosphor SSH</h1>
-<p class="meta">Dernière mise à jour : 16 juin 2026</p>
+<main class="doc">
 
-<p>Phosphor SSH (« l'application ») est édité par <strong>txrn</strong>. Cette politique
-explique quelles données l'application traite. En résumé : <strong>l'application ne
-collecte aucune donnée personnelle et ne communique avec aucun serveur que vous n'avez
-pas vous-même configuré.</strong></p>
+  <section id="fr">
+    <div class="eyebrow">// confidentialité</div>
+    <h1>Politique de confidentialité</h1>
+    <p class="meta">Dernière mise à jour : 16 juin 2026</p>
 
-<h2>1. Aucune collecte de données</h2>
-<p>L'application <strong>ne collecte, ne transmet et ne stocke sur aucun serveur</strong> :
-aucune donnée d'identification ou de compte (il n'y a pas de compte) ; aucune donnée
-d'usage, statistique ou analytique ; aucun identifiant publicitaire ; aucune donnée de
-localisation. Il n'y a <strong>aucun outil d'analyse tiers, aucune publicité, aucun
-traceur.</strong></p>
+    <p>Phosphor SSH (« l'application ») est édité par <strong>txrn</strong>. Cette politique
+    explique quelles données l'application traite. En résumé : <strong>l'application ne
+    collecte aucune donnée personnelle et ne communique avec aucun serveur que vous
+    n'avez pas vous-même configuré.</strong></p>
 
-<h2>2. Données qui restent sur votre appareil</h2>
-<p>Pour fonctionner, l'application enregistre <strong>localement, sur votre appareil
-uniquement</strong> : la liste de vos serveurs (nom, hôte, port, utilisateur, groupes,
-notes, etc.) ; vos préférences (thème du terminal, police, taille, options de
-verrouillage). Ces informations sont stockées dans le stockage local de l'application et
-<strong>ne quittent jamais l'appareil</strong>.</p>
+    <h2>1. Aucune collecte de données</h2>
+    <p>L'application <strong>ne collecte, ne transmet et ne stocke sur aucun
+    serveur</strong> : aucune donnée d'identification ou de compte (il n'y a pas de
+    compte) ; aucune donnée d'usage, statistique ou analytique ; aucun identifiant
+    publicitaire ; aucune donnée de localisation. Il n'y a <strong>aucun outil
+    d'analyse tiers, aucune publicité, aucun traceur.</strong></p>
 
-<h2>3. Identifiants et secrets</h2>
-<p>Vos mots de passe, clés privées et passphrases sont stockés de façon sécurisée dans le
-<strong>Trousseau d'iOS (Keychain)</strong>. Ils ne sont <strong>jamais</strong> transmis
-à l'éditeur ni à un tiers, et servent uniquement à établir vos connexions SSH/SFTP vers
-les serveurs que vous indiquez.</p>
+    <h2>2. Données qui restent sur votre appareil</h2>
+    <p>Pour fonctionner, l'application enregistre <strong>localement, sur votre
+    appareil uniquement</strong> : la liste de vos serveurs (nom, hôte, port,
+    utilisateur, groupes, notes, etc.) ; vos préférences (thème du terminal, police,
+    taille, options de verrouillage). Ces informations sont stockées dans le stockage
+    local de l'application et <strong>ne quittent jamais l'appareil</strong>.</p>
 
-<h2>4. Connexions réseau</h2>
-<p>Les seules connexions réseau établies par l'application sont celles que <strong>vous
-initiez explicitement</strong> vers <strong>vos propres serveurs</strong> (SSH, SFTP,
-paquets Wake-on-LAN sur votre réseau local). L'éditeur n'a aucune visibilité sur ces
-connexions ni sur leur contenu.</p>
+    <h2>3. Identifiants et secrets</h2>
+    <p>Vos mots de passe, clés privées et passphrases sont stockés de façon sécurisée
+    dans le <strong>Trousseau d'iOS (Keychain)</strong>. Ils ne sont
+    <strong>jamais</strong> transmis à l'éditeur ni à un tiers, et servent uniquement
+    à établir vos connexions SSH/SFTP vers les serveurs que vous indiquez.</p>
 
-<h2>5. Authentification biométrique</h2>
-<p>Si vous activez le verrouillage de l'application, l'authentification (Face ID, Touch ID
-ou code) est gérée par le système d'exploitation. L'application ne reçoit ni ne stocke vos
-données biométriques ; elle reçoit uniquement un résultat « réussi / échoué ».</p>
+    <h2>4. Connexions réseau</h2>
+    <p>Les seules connexions réseau établies par l'application sont celles que
+    <strong>vous initiez explicitement</strong> vers <strong>vos propres
+    serveurs</strong> (SSH, SFTP, paquets Wake-on-LAN sur votre réseau local).
+    L'éditeur n'a aucune visibilité sur ces connexions ni sur leur contenu.</p>
 
-<h2>6. Enfants</h2>
-<p>L'application ne s'adresse pas spécifiquement aux enfants et ne collecte aucune donnée
-les concernant.</p>
+    <h2>5. Authentification biométrique</h2>
+    <p>Si vous activez le verrouillage de l'application, l'authentification (Face ID,
+    Touch ID ou code) est gérée par le système d'exploitation. L'application ne reçoit
+    ni ne stocke vos données biométriques ; elle reçoit uniquement un résultat
+    « réussi / échoué ».</p>
 
-<h2>7. Modifications</h2>
-<p>Cette politique pourra être mise à jour. La date en tête de document indique la
-dernière révision.</p>
+    <h2>6. Enfants</h2>
+    <p>L'application ne s'adresse pas spécifiquement aux enfants et ne collecte aucune
+    donnée les concernant.</p>
 
-<h2>8. Contact</h2>
-<p>Pour toute question relative à cette politique : <strong>txrn@mp.me</strong></p>
-</section>
+    <h2>7. Modifications</h2>
+    <p>Cette politique pourra être mise à jour. La date en tête de document indique la
+    dernière révision.</p>
 
-<hr>
+    <h2>8. Contact</h2>
+    <p>Pour toute question relative à cette politique :
+    <strong><a href="mailto:txrnink@pm.me">txrnink@pm.me</a></strong></p>
+  </section>
 
-<section id="en">
-<h1>Privacy Policy — Phosphor SSH</h1>
-<p class="meta">Last updated: June 16, 2026</p>
+</main>
 
-<p>Phosphor SSH ("the app") is published by <strong>txrn</strong>. This policy explains
-what data the app processes. In short: <strong>the app collects no personal data and
-communicates only with servers you configure yourself.</strong></p>
-
-<h2>1. No data collection</h2>
-<p>The app <strong>does not collect, transmit or store on any server</strong>: any identity
-or account data (there is no account); any usage, statistics or analytics data; any
-advertising identifier; any location data. There are <strong>no third-party analytics, no
-ads, no trackers.</strong></p>
-
-<h2>2. Data that stays on your device</h2>
-<p>To work, the app stores <strong>locally, on your device only</strong>: your list of
-servers (name, host, port, username, groups, notes, etc.); your preferences (terminal
-theme, font, size, lock options). This information is kept in the app's local storage and
-<strong>never leaves the device</strong>.</p>
-
-<h2>3. Credentials and secrets</h2>
-<p>Your passwords, private keys and passphrases are stored securely in the <strong>iOS
-Keychain</strong>. They are <strong>never</strong> sent to the publisher or any third
-party, and are used solely to establish your SSH/SFTP connections to the servers you
-specify.</p>
-
-<h2>4. Network connections</h2>
-<p>The only network connections the app makes are the ones <strong>you explicitly
-initiate</strong> to <strong>your own servers</strong> (SSH, SFTP, Wake-on-LAN packets on
-your local network). The publisher has no visibility into these connections or their
-content.</p>
-
-<h2>5. Biometric authentication</h2>
-<p>If you enable app lock, authentication (Face ID, Touch ID or passcode) is handled by the
-operating system. The app neither receives nor stores your biometric data; it only
-receives a "success / failure" result.</p>
-
-<h2>6. Children</h2>
-<p>The app is not directed at children and does not collect any data about them.</p>
-
-<h2>7. Changes</h2>
-<p>This policy may be updated. The date at the top indicates the latest revision.</p>
-
-<h2>8. Contact</h2>
-<p>For any question about this policy: <strong>txrn@mp.me</strong></p>
-</section>
+<footer>
+  <div class="wrap">
+    <a class="brand" href="/"><span class="logo">P</span> Phosphor<span style="color:var(--muted);font-weight:400">SSH</span></a>
+    <p class="note">
+      <a href="/privacy.html">Confidentialité</a> ·
+      <a href="/support.html">Assistance</a> ·
+      <a href="mailto:txrnink@pm.me">txrnink@pm.me</a>
+    </p>
+  </div>
+</footer>
 
 </body>
 </html>
